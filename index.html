@@ -125,42 +125,50 @@
         <h2 class="section-title" data-i18n="gallery.title">The Apartment</h2>
         <p class="section-desc" data-i18n="gallery.desc">Every corner designed to make you feel at home</p>
       </div>
-      <div class="gallery-grid">
-        <div class="gallery-item gallery-item--wide">
-          <img src="images/living-room.jpeg" alt="Living room"
-               onerror="this.src='https://placehold.co/800x500/e8d5b7/2c2c2c?text=Living+Room'">
-          <span class="gallery-label" data-i18n="gallery.livingRoom">Living Room</span>
+      <div class="gallery-scroll-wrapper">
+        <button class="gallery-arrow gallery-arrow--prev" id="galleryPrev" aria-label="Previous">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="gallery-scroll" id="galleryScroll">
+          <div class="gallery-item">
+            <img src="images/living-room.jpeg" alt="Living room"
+                 onerror="this.src='https://placehold.co/800x500/e8d5b7/2c2c2c?text=Living+Room'">
+            <span class="gallery-label" data-i18n="gallery.livingRoom">Living Room</span>
+          </div>
+          <div class="gallery-item">
+            <img src="images/kitchen.jpeg" alt="Kitchen"
+                 onerror="this.src='https://placehold.co/500x400/2d6a7a/ffffff?text=Kitchen'">
+            <span class="gallery-label" data-i18n="gallery.kitchen">Kitchen</span>
+          </div>
+          <div class="gallery-item">
+            <img src="images/bedroom.jpeg" alt="Bedroom"
+                 onerror="this.src='https://placehold.co/500x400/4a8fa1/ffffff?text=Bedroom'">
+            <span class="gallery-label" data-i18n="gallery.bedroom">Bedroom</span>
+          </div>
+          <div class="gallery-item">
+            <img src="images/bathroom.jpeg" alt="Bathroom"
+                 onerror="this.src='https://placehold.co/500x400/c8956c/ffffff?text=Bathroom'">
+            <span class="gallery-label" data-i18n="gallery.bathroom">Bathroom</span>
+          </div>
+          <div class="gallery-item">
+            <img src="images/garden.jpeg" alt="Garden"
+                 onerror="this.src='https://placehold.co/500x400/1f4d5a/ffffff?text=Garden'">
+            <span class="gallery-label" data-i18n="gallery.garden">Garden</span>
+          </div>
+          <div class="gallery-item">
+            <img src="images/outside.jpeg" alt="Outside view"
+                 onerror="this.src='https://placehold.co/500x400/2d6a7a/ffffff?text=Outside+View'">
+            <span class="gallery-label" data-i18n="gallery.outside">Outside</span>
+          </div>
+          <div class="gallery-item">
+            <img src="images/living-room-1.jpeg" alt="Living room — another angle"
+                 onerror="this.src='https://placehold.co/800x500/e8d5b7/2c2c2c?text=Living+Room'">
+            <span class="gallery-label" data-i18n="gallery.livingRoom">Living Room</span>
+          </div>
         </div>
-        <div class="gallery-item">
-          <img src="images/kitchen.jpeg" alt="Kitchen"
-               onerror="this.src='https://placehold.co/500x400/2d6a7a/ffffff?text=Kitchen'">
-          <span class="gallery-label" data-i18n="gallery.kitchen">Kitchen</span>
-        </div>
-        <div class="gallery-item">
-          <img src="images/bedroom.jpeg" alt="Bedroom"
-               onerror="this.src='https://placehold.co/500x400/4a8fa1/ffffff?text=Bedroom'">
-          <span class="gallery-label" data-i18n="gallery.bedroom">Bedroom</span>
-        </div>
-        <div class="gallery-item">
-          <img src="images/bathroom.jpeg" alt="Bathroom"
-               onerror="this.src='https://placehold.co/500x400/c8956c/ffffff?text=Bathroom'">
-          <span class="gallery-label" data-i18n="gallery.bathroom">Bathroom</span>
-        </div>
-        <div class="gallery-item">
-          <img src="images/garden.jpeg" alt="Garden"
-               onerror="this.src='https://placehold.co/500x400/1f4d5a/ffffff?text=Garden'">
-          <span class="gallery-label" data-i18n="gallery.garden">Garden</span>
-        </div>
-        <div class="gallery-item">
-          <img src="images/outside.jpeg" alt="Outside view"
-               onerror="this.src='https://placehold.co/500x400/2d6a7a/ffffff?text=Outside+View'">
-          <span class="gallery-label" data-i18n="gallery.outside">Outside</span>
-        </div>
-        <div class="gallery-item gallery-item--wide">
-          <img src="images/living-room-1.jpeg" alt="Living room — another angle"
-               onerror="this.src='https://placehold.co/800x500/e8d5b7/2c2c2c?text=Living+Room'">
-          <span class="gallery-label" data-i18n="gallery.livingRoom">Living Room</span>
-        </div>
+        <button class="gallery-arrow gallery-arrow--next" id="galleryNext" aria-label="Next">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
       </div>
     </div>
   </section>

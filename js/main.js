@@ -426,6 +426,20 @@ document.getElementById('calNext').addEventListener('click', () => {
 });
 
 /* ============================================
+   Gallery — arrow scroll
+   ============================================ */
+const galleryScroll = document.getElementById('galleryScroll');
+const SCROLL_AMOUNT = 400;
+
+document.getElementById('galleryPrev').addEventListener('click', () => {
+  galleryScroll.scrollBy({ left: -SCROLL_AMOUNT, behavior: 'smooth' });
+});
+
+document.getElementById('galleryNext').addEventListener('click', () => {
+  galleryScroll.scrollBy({ left: SCROLL_AMOUNT, behavior: 'smooth' });
+});
+
+/* ============================================
    Init
    ============================================ */
 applyTranslations(currentLang);
