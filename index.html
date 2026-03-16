@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kisi Home | Charming Apartment near Lake Como</title>
+  <meta name="description" content="A cozy one-bedroom apartment in Vestreno, above Dervio, near Lake Como. Run by a mother and daughter with heart. Book directly via WhatsApp.">
+  <meta name="keywords" content="Vestreno, Lake Como, apartment rental, B&B, Dervio, short-term rental, holiday apartment, Kisi Home">
+  <meta property="og:title" content="Kisi Home | Charming Apartment near Lake Como">
+  <meta property="og:description" content="A cozy one-bedroom apartment in Vestreno, above Dervio, near Lake Como. Book directly via WhatsApp.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://your-domain.com/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/393501709040?text=Hello!%20I'm%20interested%20in%20booking%20your%20apartment%20in%20Vestreno.%20Could%20you%20please%20tell%20me%20if%20it's%20available%20for%20my%20dates%3F"
+     class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span data-i18n="wa.float">Book Now</span>
+  </a>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">Kisi Home</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" data-i18n="nav.about">About</a></li>
+        <li><a href="#gallery" data-i18n="nav.gallery">Gallery</a></li>
+        <li><a href="#location" data-i18n="nav.location">Location</a></li>
+        <li><a href="#amenities" data-i18n="nav.amenities">Amenities</a></li>
+        <li><a href="#availability" data-i18n="nav.availability">Availability</a></li>
+        <li><a href="#contact" class="nav-cta" data-i18n="nav.bookNow">Book Now</a></li>
+      </ul>
+      <div class="nav-right">
+        <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-btn active" data-lang="en" aria-label="English">&#127468;&#127463;</button>
+          <button class="lang-btn" data-lang="it" aria-label="Italiano">&#127470;&#127481;</button>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-slider" id="heroSlider">
+      <div class="hero-slide active" style="background-image: url('images/lake-1.jpeg'), url('https://placehold.co/1920x1080/2d6a7a/ffffff?text=Lake+Como')"></div>
+      <div class="hero-slide" style="background-image: url('images/outside.jpeg')"></div>
+      <div class="hero-slide" style="background-image: url('images/garden.jpeg')"></div>
+      <div class="hero-slide" style="background-image: url('images/lake-2.jpeg'), url('https://placehold.co/1920x1080/1f4d5a/ffffff?text=Lake+Como+View')"></div>
+      <div class="hero-slide" style="background-image: url('images/garden-1.jpeg')"></div>
+      <div class="hero-slide" style="background-image: url('images/living-room.jpeg')"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-tagline" data-i18n="hero.tagline">A home above the lake</p>
+      <h1>Kisi Home</h1>
+      <p class="hero-subtitle" data-i18n="hero.subtitle">Cozy apartment in Vestreno &middot; Near Lake Como, Italy</p>
+      <div class="hero-actions">
+        <a href="https://wa.me/393501709040?text=Hello!%20I'm%20interested%20in%20booking%20your%20apartment%20in%20Vestreno.%20Could%20you%20please%20tell%20me%20if%20it's%20available%20for%20my%20dates%3F"
+           class="btn btn-whatsapp" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span data-i18n="hero.bookWa">Book via WhatsApp</span>
+        </a>
+        <a href="#about" class="btn btn-outline" data-i18n="hero.discover">Discover More</a>
+      </div>
+    </div>
+    <div class="hero-dots" id="heroDots"></div>
+    <div class="hero-scroll">
+      <span data-i18n="hero.scroll">Scroll to explore</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-images">
+          <img src="images/living-room.jpeg" alt="Living room of Kisi Home"
+               class="about-img-main"
+               onerror="this.src='https://placehold.co/800x420/e8d5b7/2c2c2c?text=Living+Room'">
+          <img src="images/bedroom.jpeg" alt="Bedroom of Kisi Home"
+               class="about-img-secondary"
+               onerror="this.src='https://placehold.co/500x220/c8956c/ffffff?text=Bedroom'">
+        </div>
+        <div class="about-content">
+          <span class="section-label" data-i18n="about.label">Our Home</span>
+          <h2 class="section-title" data-i18n="about.title">A warm and cozy apartment, run with love</h2>
+          <p data-i18n="about.p1">Nestled in the quiet hillside village of Vestreno, above the charming town of Dervio, our apartment is a family-run retreat managed by a mother and daughter who take great pride in welcoming guests.</p>
+          <p data-i18n="about.p2">The apartment sleeps up to 4 guests — with a comfortable bedroom and a sofa bed in the living area. Bright, well-kept and full of character. Whether you're here to relax by the lake, hike the surrounding hills, or simply slow down and breathe the mountain air — this is your home away from home.</p>
+          <div class="about-highlights">
+            <div class="highlight">
+              <span class="highlight-number">2</span>
+              <span class="highlight-label" data-i18n="about.beds">Beds</span>
+            </div>
+            <div class="highlight">
+              <span class="highlight-number">2&ndash;4</span>
+              <span class="highlight-label" data-i18n="about.guests">Guests</span>
+            </div>
+            <div class="highlight">
+              <span class="highlight-number">1</span>
+              <span class="highlight-label" data-i18n="about.bathroom">Bathroom</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo Gallery -->
+  <section class="section section-alt" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label" data-i18n="gallery.label">Take a Look Inside</span>
+        <h2 class="section-title" data-i18n="gallery.title">The Apartment</h2>
+        <p class="section-desc" data-i18n="gallery.desc">Every corner designed to make you feel at home</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item gallery-item--wide">
+          <img src="images/living-room.jpeg" alt="Living room"
+               onerror="this.src='https://placehold.co/800x500/e8d5b7/2c2c2c?text=Living+Room'">
+          <span class="gallery-label" data-i18n="gallery.livingRoom">Living Room</span>
+        </div>
+        <div class="gallery-item">
+          <img src="images/kitchen.jpeg" alt="Kitchen"
+               onerror="this.src='https://placehold.co/500x400/2d6a7a/ffffff?text=Kitchen'">
+          <span class="gallery-label" data-i18n="gallery.kitchen">Kitchen</span>
+        </div>
+        <div class="gallery-item">
+          <img src="images/bedroom.jpeg" alt="Bedroom"
+               onerror="this.src='https://placehold.co/500x400/4a8fa1/ffffff?text=Bedroom'">
+          <span class="gallery-label" data-i18n="gallery.bedroom">Bedroom</span>
+        </div>
+        <div class="gallery-item">
+          <img src="images/bathroom.jpeg" alt="Bathroom"
+               onerror="this.src='https://placehold.co/500x400/c8956c/ffffff?text=Bathroom'">
+          <span class="gallery-label" data-i18n="gallery.bathroom">Bathroom</span>
+        </div>
+        <div class="gallery-item">
+          <img src="images/garden.jpeg" alt="Garden"
+               onerror="this.src='https://placehold.co/500x400/1f4d5a/ffffff?text=Garden'">
+          <span class="gallery-label" data-i18n="gallery.garden">Garden</span>
+        </div>
+        <div class="gallery-item">
+          <img src="images/outside.jpeg" alt="Outside view"
+               onerror="this.src='https://placehold.co/500x400/2d6a7a/ffffff?text=Outside+View'">
+          <span class="gallery-label" data-i18n="gallery.outside">Outside</span>
+        </div>
+        <div class="gallery-item gallery-item--wide">
+          <img src="images/living-room-1.jpeg" alt="Living room — another angle"
+               onerror="this.src='https://placehold.co/800x500/e8d5b7/2c2c2c?text=Living+Room'">
+          <span class="gallery-label" data-i18n="gallery.livingRoom">Living Room</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Meet the Hosts -->
+  <section class="section hosts-section" id="hosts">
+    <div class="container">
+      <div class="hosts-grid">
+        <div class="hosts-image">
+          <img src="images/hosts.jpeg" alt="Your hosts — mother and daughter"
+               onerror="this.src='https://placehold.co/600x500/e8d5b7/2c2c2c?text=Your+Hosts'">
+        </div>
+        <div class="hosts-content">
+          <span class="section-label" data-i18n="hosts.label">Your Hosts</span>
+          <h2 class="section-title" data-i18n="hosts.title">Meet Chiara &amp; Simonetta</h2>
+          <p data-i18n="hosts.p1">We're Chiara and Simonetta, a mother and daughter from Vestreno. We personally take care of every stay and love having guests.</p>
+          <p data-i18n="hosts.p2">We're always around if you need anything — local tips, restaurant suggestions, or help planning your time here.</p>
+          <a href="https://wa.me/393501709040?text=Hello!%20I'm%20interested%20in%20booking%20your%20apartment%20in%20Vestreno.%20Could%20you%20please%20tell%20me%20if%20it's%20available%20for%20my%20dates%3F"
+             class="btn btn-whatsapp" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <span data-i18n="hosts.wa">Say Hello on WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location -->
+  <section class="section section-alt" id="location">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label" data-i18n="location.label">Where We Are</span>
+        <h2 class="section-title" data-i18n="location.title">Vestreno, above Lake Como</h2>
+        <p class="section-desc" data-i18n="location.desc">A hidden gem in the Italian Lake District — where mountains meet water</p>
+      </div>
+      <div class="location-grid">
+        <div class="location-content">
+          <p data-i18n="location.p">Vestreno is a small, peaceful village perched on the hills above Dervio, on the eastern branch of Lake Como. From here, you can enjoy breathtaking views over the lake and easy access to all that the area has to offer.</p>
+          <ul class="location-list">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <div data-i18n-html="location.d1"><strong>5 min</strong> to Dervio town centre &amp; lake shore</div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <div data-i18n-html="location.d2"><strong>30 min</strong> to Lecco by car</div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <div data-i18n-html="location.d3"><strong>1 hr</strong> to Milan by train from Dervio</div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <div data-i18n-html="location.d4"><strong>15 min</strong> to Colico ferry terminal</div>
+            </li>
+          </ul>
+        </div>
+        <div class="location-map">
+          <div class="map-embed">
+            <iframe
+              src="https://maps.google.com/maps?q=Vestreno+LC+Italy&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              width="100%"
+              height="350"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              title="Map showing Vestreno near Lake Como, Italy">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Amenities -->
+  <section class="section" id="amenities">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label" data-i18n="amenities.label">What's Included</span>
+        <h2 class="section-title" data-i18n="amenities.title">Everything you need</h2>
+        <p class="section-desc" data-i18n="amenities.desc">We've thought of the details so you don't have to</p>
+      </div>
+      <div class="amenities-grid">
+
+        <div class="amenity-card">
+          <div class="amenity-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3 data-i18n="amenities.kitchen.title">Full Kitchen</h3>
+          <p data-i18n="amenities.kitchen.desc">Equipped kitchen with fridge, stove, oven, and all you need to cook Italian meals</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          </div>
+          <h3 data-i18n="amenities.parking.title">Free Parking</h3>
+          <p data-i18n="amenities.parking.desc">Private parking space available on-site, at no extra charge</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12.55a11 11 0 0114.08 0M1.42 9a16 16 0 0121.16 0M8.53 16.11a6 6 0 016.95 0M12 20h.01"/></svg>
+          </div>
+          <h3 data-i18n="amenities.wifi.title">Free Wi-Fi</h3>
+          <p data-i18n="amenities.wifi.desc">Fast and reliable Wi-Fi throughout the apartment</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9.59 4.59A2 2 0 1 1 11 8H2"/><path d="M10.59 19.41A2 2 0 1 0 12 16H2"/><path d="M15.73 8.27A2.5 2.5 0 1 1 17.5 12H2"/></svg>
+          </div>
+          <h3 data-i18n="amenities.air.title">Fresh Mountain Air</h3>
+          <p data-i18n="amenities.air.desc">No A/C needed — clean, natural mountain air keeps the apartment cool and pleasant all summer</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          </div>
+          <h3 data-i18n="amenities.views.title">Lake Views</h3>
+          <p data-i18n="amenities.views.desc">Wake up to stunning views of Lake Como from the terrace</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+          </div>
+          <h3 data-i18n="amenities.linen.title">Linen &amp; Towels</h3>
+          <p data-i18n="amenities.linen.desc">Fresh bed linen and towels provided for every stay</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 3H7a2 2 0 00-2 2v14a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2z"/><line x1="12" y1="11" x2="12" y2="11.01"/></svg>
+          </div>
+          <h3 data-i18n="amenities.entrance.title">Private Entrance</h3>
+          <p data-i18n="amenities.entrance.desc">Independent access for complete privacy and flexibility</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2c0 0-5 4.5-5 9a5 5 0 0 0 10 0c0-1.5-.5-3-1.5-4.5C15 9 13.5 10 13.5 10c.5-2-1-4.5-1.5-8z"/></svg>
+          </div>
+          <h3 data-i18n="amenities.pellet.title">Pellet Stove</h3>
+          <p data-i18n="amenities.pellet.desc">The pellet stove warms the room and adds that extra touch of home — perfect for cool evenings</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Availability -->
+  <section class="section section-alt" id="availability">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label" data-i18n="avail.label">Check Dates</span>
+        <h2 class="section-title" data-i18n="avail.title">Availability Calendar</h2>
+        <p class="section-desc" id="availabilityNote" data-i18n="avail.desc">Dates marked in red are already booked. Contact us to check current availability.</p>
+      </div>
+
+      <div class="calendar-wrapper">
+        <div class="calendar-nav">
+          <button class="cal-btn" id="calPrev" aria-label="Previous month">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <div class="calendar-months" id="calendarMonths"></div>
+          <button class="cal-btn" id="calNext" aria-label="Next month">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+        <div class="calendar-legend">
+          <span class="legend-item"><span class="legend-dot available"></span> <span data-i18n="avail.available">Available</span></span>
+          <span class="legend-item"><span class="legend-dot occupied"></span> <span data-i18n="avail.booked">Booked</span></span>
+          <span class="legend-item"><span class="legend-dot today-dot"></span> <span data-i18n="avail.today">Today</span></span>
+          <span class="legend-item"><span class="legend-dot past"></span> <span data-i18n="avail.past">Past</span></span>
+        </div>
+      </div>
+
+      <div class="availability-cta">
+        <p data-i18n="avail.cta">See a date you like? Get in touch and we'll confirm your booking!</p>
+        <a href="https://wa.me/393501709040?text=Hello!%20I'm%20interested%20in%20booking%20your%20apartment%20in%20Vestreno.%20Could%20you%20please%20tell%20me%20if%20it's%20available%20for%20my%20dates%3F"
+           class="btn btn-whatsapp" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span data-i18n="avail.wa">Check Availability on WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label" data-i18n="contact.label">Get In Touch</span>
+        <h2 class="section-title" data-i18n="contact.title">Ready to book your stay?</h2>
+        <p class="section-desc" data-i18n="contact.desc">We'd love to welcome you. Reach out directly — we reply quickly!</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card contact-main">
+          <div class="contact-icon whatsapp-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </div>
+          <h3 data-i18n="contact.wa.title">Book via WhatsApp</h3>
+          <p data-i18n="contact.wa.desc">The fastest way to reach us! Send a message and we'll get back to you within the hour.</p>
+          <a href="https://wa.me/393501709040?text=Hello!%20I'm%20interested%20in%20booking%20your%20apartment%20in%20Vestreno.%20Could%20you%20please%20tell%20me%20if%20it's%20available%20for%20my%20dates%3F"
+             class="btn btn-whatsapp btn-large" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <span data-i18n="contact.wa.btn">Open WhatsApp Chat</span>
+          </a>
+        </div>
+        <div class="contact-info">
+          <div class="contact-detail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div>
+              <strong data-i18n="contact.address.label">Address</strong>
+              <span data-i18n-html="contact.address.value">Via Roma 103, Vestreno<br>23824 Dervio (LC), Italy</span>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.23-1.23a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7a2 2 0 011.72 2.02z"/></svg>
+            <div>
+              <strong data-i18n="contact.phone.label">Phone / WhatsApp</strong>
+              <span>+39 350 170 9040</span>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <div>
+              <strong data-i18n="contact.email.label">Email</strong>
+              <a href="mailto:kisihomevestreno@gmail.com">kisihomevestreno@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <div>
+              <strong data-i18n="contact.checkin.label">Check-in / Check-out</strong>
+              <span data-i18n-html="contact.checkin.value">Check-in: from 3:00 PM<br>Check-out: by 11:00 AM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="nav-logo">Kisi Home</span>
+          <p data-i18n-html="footer.desc">A family-run apartment above Lake Como.<br>Made with love by a mother and daughter.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#about" data-i18n="nav.about">About</a>
+          <a href="#location" data-i18n="nav.location">Location</a>
+          <a href="#amenities" data-i18n="nav.amenities">Amenities</a>
+          <a href="#availability" data-i18n="nav.availability">Availability</a>
+          <a href="#contact" data-i18n="contact.label">Get In Touch</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear"></span> Kisi Home &mdash; Vestreno, Lake Como, Italy</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
