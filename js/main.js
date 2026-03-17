@@ -323,16 +323,14 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
 let calendarOffset = 0;
 let occupiedDates = new Set();
 
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzC2OccxXHNb_b-XRCwIKAawk3o0ySXhOdxDjT8n5Ygs-5_Y53OLxKynMITmNHGxgKM/exec';
+
 async function loadAvailability() {
   try {
-    const res = await fetch('data/availability.json');
+    const res = await fetch(APPS_SCRIPT_URL);
     if (!res.ok) throw new Error('Failed to load');
     const data = await res.json();
     occupiedDates = new Set(data.occupied || []);
-    if (data.notes) {
-      const noteEl = document.getElementById('availabilityNote');
-      if (noteEl) noteEl.textContent = data.notes;
-    }
   } catch (e) {
     console.warn('Availability data not loaded:', e.message);
   }
