@@ -483,7 +483,8 @@ h1, h2, h3 {
 
 .about-highlights {
   display: flex;
-  gap: 2.5rem;
+  flex-wrap: wrap;
+  gap: 2rem 2.5rem;
   margin-top: 2rem;
   padding-top: 2rem;
   border-top: 1px solid var(--color-accent);
@@ -699,13 +700,14 @@ h1, h2, h3 {
   text-align: center;
   font-size: 0.82rem;
   border-radius: 50%;
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
   line-height: 1;
+  touch-action: manipulation;
 }
 
 .cal-day.occupied {
@@ -1200,6 +1202,41 @@ h1, h2, h3 {
 
   .calendar-nav {
     gap: 0.5rem;
+  }
+
+  .calendar-month {
+    padding: 0.875rem 0.625rem;
+  }
+
+  .cal-btn {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+  }
+
+  .calendar-grid {
+    gap: 1px;
+  }
+
+  .cal-day {
+    width: 36px;
+    height: 36px;
+    font-size: 0.85rem;
+  }
+
+  .cal-day-name {
+    font-size: 0.6rem;
+    padding: 0.25rem 0;
+  }
+
+  .month-header {
+    font-size: 0.95rem;
+  }
+
+  .calendar-legend {
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    font-size: 0.8rem;
   }
 }
 
