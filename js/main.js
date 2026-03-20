@@ -39,7 +39,7 @@ const translations = {
     'gallery.outside': 'Outside',
 
     'hosts.label': 'Your Hosts',
-    'hosts.title': 'Meet Chiara & Simonetta',
+    'hosts.title': 'Chiara (Ki) & Simonetta (Si)',
     'hosts.p1': 'We\'re Chiara and Simonetta, a mother and daughter from the Lake Como area. We personally take care of every stay and love having guests.',
     'hosts.p2': 'We\'re always around if you need anything: local tips, restaurant suggestions, or help planning your time here.',
     'hosts.wa': 'Say Hello on WhatsApp',
@@ -103,6 +103,16 @@ const translations = {
     'cal.occupied': 'Already booked',
     'cal.today': 'Today',
 
+    'avail.selectHint': 'Select your check-in and check-out dates',
+    'avail.checkin': 'Check-in',
+    'avail.checkout': 'Check-out',
+    'avail.nights': 'nights',
+    'avail.selectCheckout': 'Now select your check-out date',
+    'avail.rangeBlocked': 'Some dates in this range are already booked. Please try a different period.',
+    'avail.clear': 'Clear',
+    'avail.requestWa': 'Request on WhatsApp',
+    'avail.waRequest': "Hello! I'd like to book Kisi Home from {checkIn} to {checkOut} ({nights} nights). Is it available?",
+
     'wa.message': "Hello! I'm interested in booking your apartment in Vestreno. Could you please tell me if it's available for my dates?",
   },
 
@@ -143,7 +153,7 @@ const translations = {
     'gallery.outside': 'Esterno',
 
     'hosts.label': 'Chi siamo',
-    'hosts.title': 'Chiara e Simonetta',
+    'hosts.title': 'Chiara (Ki) & Simonetta (Si)',
     'hosts.p1': 'Siamo Chiara e Simonetta, madre e figlia della zona del Lago di Como. Ci occupiamo personalmente di ogni soggiorno e siamo felici di accogliere i nostri ospiti.',
     'hosts.p2': 'Siamo sempre disponibili se avete bisogno di qualcosa: consigli sulla zona, ristoranti, o aiuto per organizzare la vostra vacanza.',
     'hosts.wa': 'Scrivici su WhatsApp',
@@ -206,6 +216,16 @@ const translations = {
     'cal.days': ['Lun','Mar','Mer','Gio','Ven','Sab','Dom'],
     'cal.occupied': 'Già prenotato',
     'cal.today': 'Oggi',
+
+    'avail.selectHint': 'Seleziona le date di check-in e check-out',
+    'avail.checkin': 'Check-in',
+    'avail.checkout': 'Check-out',
+    'avail.nights': 'notti',
+    'avail.selectCheckout': 'Ora seleziona la data di check-out',
+    'avail.rangeBlocked': 'Alcune date in questo periodo sono già occupate. Prova un altro periodo.',
+    'avail.clear': 'Cancella',
+    'avail.requestWa': 'Richiedi su WhatsApp',
+    'avail.waRequest': "Ciao! Vorrei prenotare Kisi Home dal {checkIn} al {checkOut} ({nights} notti). È disponibile?",
 
     'wa.message': "Ciao! Sono interessato/a all'appartamento a Vestreno. Potete dirmi se è disponibile per le mie date?",
   },
@@ -311,6 +331,16 @@ const translations = {
     'cal.occupied': 'Bereits gebucht',
     'cal.today': 'Heute',
 
+    'avail.selectHint': 'Wählen Sie Ihr Check-in- und Check-out-Datum',
+    'avail.checkin': 'Check-in',
+    'avail.checkout': 'Check-out',
+    'avail.nights': 'Nächte',
+    'avail.selectCheckout': 'Wählen Sie jetzt Ihr Check-out-Datum',
+    'avail.rangeBlocked': 'Einige Daten in diesem Zeitraum sind bereits gebucht. Bitte wählen Sie einen anderen Zeitraum.',
+    'avail.clear': 'Löschen',
+    'avail.requestWa': 'Anfrage per WhatsApp',
+    'avail.waRequest': 'Hallo! Ich möchte Kisi Home vom {checkIn} bis {checkOut} ({nights} Nächte) buchen. Ist das verfügbar?',
+
     'wa.message': 'Hallo! Ich interessiere mich für Ihre Wohnung in Vestreno. Ist sie für meine Daten verfügbar?',
   }
 };
@@ -345,6 +375,7 @@ function applyTranslations(lang) {
   localStorage.setItem('lang', lang);
 
   renderCalendar();
+  updateSelectionPanel();
 }
 
 /* ============================================
@@ -501,6 +532,7 @@ function buildMonth(date, today) {
 
     const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
     const thisDate = new Date(year, month, d);
+    cell.dataset.date = dateStr;
 
     if (occupiedDates.has(dateStr)) {
       cell.classList.add('occupied');
@@ -510,8 +542,18 @@ function buildMonth(date, today) {
     } else if (thisDate.getTime() === todayMidnight.getTime()) {
       cell.classList.add('today');
       cell.title = t['cal.today'];
+      cell.addEventListener('click', () => toggleDate(dateStr));
+      if (rangeStart && !rangeEnd) cell.addEventListener('mouseover', () => previewRange(dateStr));
     } else {
       cell.classList.add('available');
+      cell.addEventListener('click', () => toggleDate(dateStr));
+      if (rangeStart && !rangeEnd) cell.addEventListener('mouseover', () => previewRange(dateStr));
+    }
+
+    if (rangeStart && dateStr === rangeStart) cell.classList.add('selected');
+    if (rangeEnd && dateStr === rangeEnd) cell.classList.add('selected');
+    if (rangeStart && rangeEnd && dateStr > rangeStart && dateStr < rangeEnd && !occupiedDates.has(dateStr)) {
+      cell.classList.add('in-range');
     }
 
     grid.appendChild(cell);
@@ -532,17 +574,167 @@ document.getElementById('calNext').addEventListener('click', () => {
 });
 
 /* ============================================
+   Date Selection (Range Mode)
+   ============================================ */
+let rangeStart = null;
+let rangeEnd = null;
+
+function getRangeDates(start, end) {
+  const dates = [];
+  const s = new Date(start + 'T00:00:00');
+  const e = new Date(end + 'T00:00:00');
+  for (let d = new Date(s); d <= e; d.setDate(d.getDate() + 1)) {
+    dates.push(d.toISOString().slice(0, 10));
+  }
+  return dates;
+}
+
+function hasOccupiedInRange(start, end) {
+  return getRangeDates(start, end).some(d => occupiedDates.has(d));
+}
+
+function previewRange(hoverDateStr) {
+  clearHoverPreview();
+  if (!rangeStart || rangeEnd) return;
+  const start = hoverDateStr < rangeStart ? hoverDateStr : rangeStart;
+  const end = hoverDateStr < rangeStart ? rangeStart : hoverDateStr;
+  document.querySelectorAll('.cal-day[data-date]').forEach(cell => {
+    const d = cell.dataset.date;
+    if (d > start && d < end && !cell.classList.contains('occupied') && !cell.classList.contains('past')) {
+      cell.classList.add('hover-range');
+    }
+  });
+}
+
+function clearHoverPreview() {
+  document.querySelectorAll('.cal-day.hover-range').forEach(c => c.classList.remove('hover-range'));
+}
+
+function toggleDate(dateStr) {
+  if (!rangeStart) {
+    rangeStart = dateStr;
+  } else if (!rangeEnd) {
+    if (dateStr === rangeStart) {
+      rangeStart = null;
+    } else {
+      let start = rangeStart, end = dateStr;
+      if (end < start) { const tmp = start; start = end; end = tmp; }
+      if (hasOccupiedInRange(start, end)) {
+        rangeStart = null;
+        rangeEnd = null;
+        clearHoverPreview();
+        renderCalendar();
+        showRangeError();
+        return;
+      }
+      rangeStart = start;
+      rangeEnd = end;
+    }
+  } else {
+    rangeStart = dateStr;
+    rangeEnd = null;
+  }
+  clearHoverPreview();
+  renderCalendar();
+  updateSelectionPanel();
+}
+
+function showRangeError() {
+  const panel = document.getElementById('dateSelectionPanel');
+  const t = translations[currentLang];
+  panel.classList.add('visible');
+  panel.innerHTML = `<p style="color:var(--color-occupied);font-size:0.9rem;padding:0.5rem 0">${t['avail.rangeBlocked']}</p>`;
+  setTimeout(() => { panel.classList.remove('visible'); panel.innerHTML = ''; }, 3000);
+}
+
+function clearSelection() {
+  rangeStart = null;
+  rangeEnd = null;
+  clearHoverPreview();
+  renderCalendar();
+  updateSelectionPanel();
+}
+
+function formatSelectedDate(dateStr, lang) {
+  const t = translations[lang];
+  const [, month, day] = dateStr.split('-').map(Number);
+  return `${day} ${t['cal.months'][month - 1]}`;
+}
+
+function updateSelectionPanel() {
+  const panel = document.getElementById('dateSelectionPanel');
+  const t = translations[currentLang];
+  if (!panel || !t) return;
+
+  if (!rangeStart) {
+    panel.classList.remove('visible');
+    panel.innerHTML = '';
+    return;
+  }
+
+  if (!rangeEnd) {
+    panel.innerHTML = `
+      <p style="font-weight:600;margin-bottom:0.25rem">${t['avail.checkin']}: ${formatSelectedDate(rangeStart, currentLang)}</p>
+      <p class="selection-dates-list" style="font-style:italic">${t['avail.selectCheckout']}</p>
+      <div class="selection-actions">
+        <button class="btn-clear" onclick="clearSelection()">${t['avail.clear']}</button>
+      </div>
+    `;
+    panel.classList.add('visible');
+    return;
+  }
+
+  const nights = getRangeDates(rangeStart, rangeEnd).length - 1;
+  const waMsg = encodeURIComponent(
+    t['avail.waRequest']
+      .replace('{checkIn}', formatSelectedDate(rangeStart, currentLang))
+      .replace('{checkOut}', formatSelectedDate(rangeEnd, currentLang))
+      .replace('{nights}', nights)
+  );
+  const waUrl = `https://wa.me/393501709040?text=${waMsg}`;
+
+  panel.innerHTML = `
+    <p class="selection-dates-list">
+      <strong>${t['avail.checkin']}:</strong> ${formatSelectedDate(rangeStart, currentLang)}
+      &nbsp;&middot;&nbsp;
+      <strong>${t['avail.checkout']}:</strong> ${formatSelectedDate(rangeEnd, currentLang)}
+      &nbsp;&middot;&nbsp;
+      ${nights} ${t['avail.nights']}
+    </p>
+    <div class="selection-actions">
+      <button class="btn-clear" onclick="clearSelection()">${t['avail.clear']}</button>
+      <a href="${waUrl}" class="btn btn-whatsapp" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        ${t['avail.requestWa']}
+      </a>
+    </div>
+  `;
+  panel.classList.add('visible');
+}
+
+document.getElementById('calendarMonths').addEventListener('mouseleave', clearHoverPreview);
+
+/* ============================================
    Gallery — arrow scroll
    ============================================ */
 const galleryScroll = document.getElementById('galleryScroll');
 const SCROLL_AMOUNT = 400;
 
 document.getElementById('galleryPrev').addEventListener('click', () => {
-  galleryScroll.scrollBy({ left: -SCROLL_AMOUNT, behavior: 'smooth' });
+  if (galleryScroll.scrollLeft <= 10) {
+    galleryScroll.scrollLeft = galleryScroll.scrollWidth;
+  } else {
+    galleryScroll.scrollBy({ left: -SCROLL_AMOUNT, behavior: 'smooth' });
+  }
 });
 
 document.getElementById('galleryNext').addEventListener('click', () => {
-  galleryScroll.scrollBy({ left: SCROLL_AMOUNT, behavior: 'smooth' });
+  const maxScroll = galleryScroll.scrollWidth - galleryScroll.clientWidth;
+  if (galleryScroll.scrollLeft >= maxScroll - 10) {
+    galleryScroll.scrollLeft = 0;
+  } else {
+    galleryScroll.scrollBy({ left: SCROLL_AMOUNT, behavior: 'smooth' });
+  }
 });
 
 /* ============================================

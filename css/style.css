@@ -621,7 +621,7 @@ h1, h2, h3 {
 
 .calendar-nav {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 1rem;
 }
 
@@ -636,7 +636,6 @@ h1, h2, h3 {
   justify-content: center;
   cursor: pointer;
   transition: all var(--transition);
-  margin-top: 0.2rem;
   flex-shrink: 0;
 }
 
@@ -729,6 +728,84 @@ h1, h2, h3 {
 
 .cal-day.available {
   color: var(--color-text);
+}
+
+.cal-day.available:hover,
+.cal-day.today:hover {
+  background: var(--color-bg-alt);
+  cursor: pointer;
+}
+
+.cal-day.selected {
+  background: var(--color-secondary);
+  color: var(--color-white);
+  font-weight: 600;
+  border-radius: 50%;
+}
+
+/* Calendar hint */
+.cal-select-hint {
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+  font-style: italic;
+  text-align: center;
+  margin: 0.25rem 0 0.75rem;
+}
+
+/* Date selection panel */
+#dateSelectionPanel {
+  display: none;
+  background: var(--color-white);
+  border: 2px solid var(--color-secondary);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  margin-top: 1.25rem;
+  text-align: center;
+}
+
+#dateSelectionPanel.visible {
+  display: block;
+}
+
+.selection-dates-list {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  margin: 0.5rem 0 1rem;
+  line-height: 1.6;
+}
+
+.selection-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-clear {
+  background: none;
+  border: 1px solid var(--color-text-light);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.btn-clear:hover {
+  border-color: var(--color-text);
+  color: var(--color-text);
+}
+
+.cal-day.in-range {
+  background: rgba(200, 149, 108, 0.18);
+  border-radius: 0;
+  color: var(--color-text);
+}
+
+.cal-day.hover-range {
+  background: rgba(200, 149, 108, 0.1);
+  border-radius: 0;
 }
 
 .calendar-legend {
@@ -1074,8 +1151,8 @@ h1, h2, h3 {
     gap: 2.5rem;
   }
 
-  .gallery-arrow--prev { left: -12px; }
-  .gallery-arrow--next { right: -12px; }
+  .gallery-arrow--prev { left: 4px; }
+  .gallery-arrow--next { right: 4px; }
 
   .about-images {
     padding-bottom: 3rem;
