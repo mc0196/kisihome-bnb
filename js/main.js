@@ -48,18 +48,19 @@ const translations = {
     'location.title': 'Vestreno, above Lake Como',
     'location.desc': 'A hidden gem in the Italian Lake District where mountains meet water',
     'location.p': 'Vestreno is a small, peaceful village perched on the hills above Dervio, on the eastern branch of Lake Como. From here, you can enjoy breathtaking views over the lake and easy access to all that the area has to offer.',
-    'location.d1': '<strong>5 min</strong> to Dervio town centre &amp; lake shore',
+    'location.d1': '<strong>10 min</strong> to Dervio town centre &amp; lake shore',
     'location.d2': '<strong>30 min</strong> to Lecco by car',
     'location.d3': '<strong>1 hr</strong> to Milan by train from Dervio',
     'location.d4': '<strong>15 min</strong> to Colico ferry terminal',
+    'location.d5': '<strong>Trekking &amp; hikes</strong> in the surrounding hills. <a class="location-link" href="https://www.komoot.com/it-it/guide/640427/fantastici-trekking-e-escursioni-nei-dintorni-di-valvarrone" target="_blank" rel="noopener">See the trail guide<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>',
 
     'amenities.label': "What's Included",
     'amenities.title': 'Everything you need',
     'amenities.desc': "We've thought of the details so you don't have to",
-    'amenities.kitchen.title': 'Full Kitchen',
-    'amenities.kitchen.desc': 'Equipped kitchen with fridge, stove, oven, and all you need to cook Italian meals',
-    'amenities.parking.title': 'Free Parking',
-    'amenities.parking.desc': 'Private parking space available on-site, at no extra charge',
+    'amenities.kitchen.title': 'Kitchen',
+    'amenities.kitchen.desc': 'Equipped kitchen with fridge, stove, microwave, and all you need to cook Italian meals',
+    'amenities.parking.title': 'Parking Nearby',
+    'amenities.parking.desc': 'Free parking available nearby',
     'amenities.wifi.title': 'Free Wi-Fi',
     'amenities.wifi.desc': 'Fast and reliable Wi-Fi throughout the apartment',
     'amenities.air.title': 'Fresh Mountain Air',
@@ -68,8 +69,8 @@ const translations = {
     'amenities.dogs.desc': 'Your four-legged friends are welcome, the area is perfect for walks with dogs',
     'amenities.linen.title': 'Linen & Towels',
     'amenities.linen.desc': 'Fresh bed linen and towels provided for every stay',
-    'amenities.entrance.title': 'Private Entrance',
-    'amenities.entrance.desc': 'Independent access for complete privacy and flexibility',
+    'amenities.laundry.title': 'Laundry',
+    'amenities.laundry.desc': 'Washing machine available on request',
     'amenities.pellet.title': 'Pellet Stove',
     'amenities.pellet.desc': 'The pellet stove warms the room and adds that extra touch of home, perfect for cool evenings',
 
@@ -95,6 +96,7 @@ const translations = {
     'contact.email.label': 'Email',
     'contact.checkin.label': 'Check-in / Check-out',
     'contact.checkin.value': 'Check-in: from 3:00 PM<br>Check-out: by 11:00 AM',
+    'contact.cin.label': 'CIN (National ID Code)',
 
     'footer.desc': 'A family-run apartment above Lake Como.<br>Made with love by a mother and daughter.',
 
@@ -162,18 +164,19 @@ const translations = {
     'location.title': 'Vestreno, sopra il Lago di Como',
     'location.desc': 'Un angolo nascosto del Lago di Como tra montagne e acqua',
     'location.p': 'Vestreno è un piccolo borgo sulle colline sopra Dervio, sul ramo orientale del Lago di Como. Da qui si gode di una vista spettacolare sul lago e si raggiungono facilmente tutte le attrazioni della zona.',
-    'location.d1': '<strong>5 min</strong> dal centro di Dervio e dalla riva del lago',
+    'location.d1': '<strong>10 min</strong> dal centro di Dervio e dalla riva del lago',
     'location.d2': '<strong>30 min</strong> da Lecco in auto',
     'location.d3': '<strong>1 ora</strong> da Milano in treno da Dervio',
     'location.d4': '<strong>15 min</strong> dal traghetto di Colico',
+    'location.d5': '<strong>Trekking ed escursioni</strong> nei dintorni. <a class="location-link" href="https://www.komoot.com/it-it/guide/640427/fantastici-trekking-e-escursioni-nei-dintorni-di-valvarrone" target="_blank" rel="noopener">Scopri la guida ai sentieri<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>',
 
     'amenities.label': 'Cosa è incluso',
     'amenities.title': 'Tutto ciò che serve',
     'amenities.desc': 'Abbiamo pensato ai dettagli per voi',
-    'amenities.kitchen.title': 'Cucina completa',
-    'amenities.kitchen.desc': 'Cucina attrezzata con frigo, fornelli, forno e tutto il necessario',
-    'amenities.parking.title': 'Parcheggio gratuito',
-    'amenities.parking.desc': 'Posto auto privato disponibile, senza costi aggiuntivi',
+    'amenities.kitchen.title': 'Cucina',
+    'amenities.kitchen.desc': 'Cucina attrezzata con frigo, fornelli, microonde e tutto il necessario',
+    'amenities.parking.title': 'Parcheggio nelle vicinanze',
+    'amenities.parking.desc': 'Parcheggio gratuito nelle vicinanze',
     'amenities.wifi.title': 'Wi-Fi gratuito',
     'amenities.wifi.desc': "Wi-Fi veloce e affidabile in tutto l'appartamento",
     'amenities.air.title': 'Aria pulita e naturale',
@@ -182,8 +185,8 @@ const translations = {
     'amenities.dogs.desc': 'I vostri amici a quattro zampe sono i benvenuti, la zona è perfetta per passeggiate con i cani',
     'amenities.linen.title': 'Biancheria inclusa',
     'amenities.linen.desc': 'Lenzuola e asciugamani freschi forniti per ogni soggiorno',
-    'amenities.entrance.title': 'Ingresso indipendente',
-    'amenities.entrance.desc': 'Accesso autonomo per massima privacy e flessibilità',
+    'amenities.laundry.title': 'Lavanderia',
+    'amenities.laundry.desc': 'Lavanderia disponibile su richiesta',
     'amenities.pellet.title': 'Stufa a pellet',
     'amenities.pellet.desc': 'La stufa a pellet scalda l\'ambiente e vi farà sentire ancora di più a casa, ideale per le serate fresche',
 
@@ -209,6 +212,7 @@ const translations = {
     'contact.email.label': 'Email',
     'contact.checkin.label': 'Check-in / Check-out',
     'contact.checkin.value': 'Check-in: dalle 15:00<br>Check-out: entro le 11:00',
+    'contact.cin.label': 'CIN (Codice Identificativo Nazionale)',
 
     'footer.desc': 'Appartamento a gestione familiare sopra il Lago di Como.<br>Con amore, madre e figlia.',
 
@@ -276,18 +280,19 @@ const translations = {
     'location.title': 'Vestreno, über dem Comer See',
     'location.desc': 'Ein verstecktes Juwel im italienischen Seengebiet zwischen Bergen und Wasser',
     'location.p': 'Vestreno ist ein kleines, ruhiges Dorf auf den Hügeln oberhalb von Dervio, am östlichen Arm des Comer Sees. Von hier genießen Sie einen atemberaubenden Blick auf den See.',
-    'location.d1': '<strong>5 Min.</strong> bis ins Zentrum von Dervio & ans Seeufer',
+    'location.d1': '<strong>10 Min.</strong> bis ins Zentrum von Dervio & ans Seeufer',
     'location.d2': '<strong>30 Min.</strong> bis Lecco mit dem Auto',
     'location.d3': '<strong>1 Std.</strong> bis Mailand mit dem Zug ab Dervio',
     'location.d4': '<strong>15 Min.</strong> bis zur Fähre in Colico',
+    'location.d5': '<strong>Trekking & Wanderungen</strong> in der Umgebung. <a class="location-link" href="https://www.komoot.com/it-it/guide/640427/fantastici-trekking-e-escursioni-nei-dintorni-di-valvarrone" target="_blank" rel="noopener">Zum Wanderführer<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>',
 
     'amenities.label': 'Was enthalten ist',
     'amenities.title': 'Alles, was Sie brauchen',
     'amenities.desc': 'Wir haben an die Details gedacht',
-    'amenities.kitchen.title': 'Voll ausgestattete Küche',
-    'amenities.kitchen.desc': 'Küche mit Kühlschrank, Herd, Ofen und allem, was Sie zum Kochen brauchen',
-    'amenities.parking.title': 'Kostenloser Parkplatz',
-    'amenities.parking.desc': 'Privater Parkplatz direkt vor Ort, ohne Aufpreis',
+    'amenities.kitchen.title': 'Küche',
+    'amenities.kitchen.desc': 'Küche mit Kühlschrank, Herd, Mikrowelle und allem, was Sie zum Kochen brauchen',
+    'amenities.parking.title': 'Parkplatz in der Nähe',
+    'amenities.parking.desc': 'Kostenloser Parkplatz in der Nähe',
     'amenities.wifi.title': 'Kostenloses WLAN',
     'amenities.wifi.desc': 'Schnelles und zuverlässiges WLAN in der gesamten Wohnung',
     'amenities.air.title': 'Frische Bergluft',
@@ -296,8 +301,8 @@ const translations = {
     'amenities.dogs.desc': 'Ihre Vierbeiner sind herzlich willkommen, die Gegend ist ideal für Spaziergänge mit Hunden',
     'amenities.linen.title': 'Bettwäsche & Handtücher',
     'amenities.linen.desc': 'Frische Bettwäsche und Handtücher für jeden Aufenthalt',
-    'amenities.entrance.title': 'Separater Eingang',
-    'amenities.entrance.desc': 'Unabhängiger Zugang für maximale Privatsphäre und Flexibilität',
+    'amenities.laundry.title': 'Wäsche',
+    'amenities.laundry.desc': 'Waschmaschine auf Anfrage verfügbar',
     'amenities.pellet.title': 'Pelletofen',
     'amenities.pellet.desc': 'Der Pelletofen wärmt den Raum und sorgt für ein echtes Heimgefühl, perfekt für kühle Abende',
 
@@ -323,6 +328,7 @@ const translations = {
     'contact.email.label': 'E-Mail',
     'contact.checkin.label': 'Check-in / Check-out',
     'contact.checkin.value': 'Check-in: ab 15:00 Uhr<br>Check-out: bis 11:00 Uhr',
+    'contact.cin.label': 'CIN (Nationaler Kenncode)',
 
     'footer.desc': 'Familiengeführte Wohnung über dem Comer See.<br>Mit Liebe von Mutter und Tochter.',
 
@@ -417,6 +423,7 @@ let currentSlide = 0;
 let slideInterval;
 
 slides.forEach((_, i) => {
+  if (!dotsContainer) return;
   const dot = document.createElement('button');
   dot.className = 'hero-dot' + (i === 0 ? ' active' : '');
   dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
@@ -429,10 +436,10 @@ slides.forEach((_, i) => {
 
 function goToSlide(index) {
   slides[currentSlide].classList.remove('active');
-  dotsContainer.children[currentSlide].classList.remove('active');
+  if (dotsContainer) dotsContainer.children[currentSlide].classList.remove('active');
   currentSlide = index;
   slides[currentSlide].classList.add('active');
-  dotsContainer.children[currentSlide].classList.add('active');
+  if (dotsContainer) dotsContainer.children[currentSlide].classList.add('active');
 }
 
 function nextSlide() {
@@ -440,6 +447,7 @@ function nextSlide() {
 }
 
 function startSlider() {
+  if (slides.length <= 1) return;
   slideInterval = setInterval(nextSlide, 5000);
 }
 
@@ -735,6 +743,57 @@ document.getElementById('galleryNext').addEventListener('click', () => {
   } else {
     galleryScroll.scrollBy({ left: SCROLL_AMOUNT, behavior: 'smooth' });
   }
+});
+
+/* ============================================
+   Lightbox — gallery zoom & navigation
+   ============================================ */
+const galleryItems = Array.from(document.querySelectorAll('#galleryScroll .gallery-item'));
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+const lightboxCaption = document.getElementById('lightboxCaption');
+let lightboxIndex = 0;
+
+function showLightbox(index) {
+  lightboxIndex = (index + galleryItems.length) % galleryItems.length;
+  const item = galleryItems[lightboxIndex];
+  const img = item.querySelector('img');
+  const label = item.querySelector('.gallery-label');
+  lightboxImg.src = img.currentSrc || img.src;
+  lightboxImg.alt = img.alt || '';
+  lightboxCaption.textContent = label ? label.textContent : '';
+}
+
+function openLightbox(index) {
+  showLightbox(index);
+  lightbox.classList.add('open');
+  lightbox.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  lightbox.classList.remove('open');
+  lightbox.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
+galleryItems.forEach((item, i) => {
+  item.addEventListener('click', () => openLightbox(i));
+});
+
+document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+document.getElementById('lightboxPrev').addEventListener('click', () => showLightbox(lightboxIndex - 1));
+document.getElementById('lightboxNext').addEventListener('click', () => showLightbox(lightboxIndex + 1));
+
+lightbox.addEventListener('click', (e) => {
+  if (e.target === lightbox) closeLightbox();
+});
+
+document.addEventListener('keydown', (e) => {
+  if (!lightbox.classList.contains('open')) return;
+  if (e.key === 'Escape') closeLightbox();
+  else if (e.key === 'ArrowLeft') showLightbox(lightboxIndex - 1);
+  else if (e.key === 'ArrowRight') showLightbox(lightboxIndex + 1);
 });
 
 /* ============================================
