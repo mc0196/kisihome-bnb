@@ -13,16 +13,15 @@ const translations = {
     'wa.float': 'Book Now',
 
     'hero.tagline': 'A home above the lake',
-    'hero.subtitle': 'Cozy apartment in Vestreno · Near Lake Como, Italy',
+    'hero.subtitle': 'Cozy apartment in Valvarrone · Near Lake Como, Italy',
     'hero.bookWa': 'Book via WhatsApp',
     'hero.discover': 'Discover More',
     'hero.scroll': 'Scroll to explore',
 
     'about.label': 'Our Home',
     'about.title': 'A warm and cozy apartment, run with love',
-    'about.p1': 'Nestled in the quiet hillside village of Vestreno, above the charming town of Dervio, our apartment is a family-run retreat managed by a mother and daughter who take great pride in welcoming guests.',
-    'about.p2': 'The apartment sleeps up to 4 guests with a comfortable bedroom and a sofa bed in the living area. Bright, well-kept and full of character. Whether you\'re here to relax by the lake, hike the surrounding hills, or simply slow down. This is your home away from home.',
-    'about.beds': 'Beds',
+    'about.p1': 'Nestled in the quiet hillside hamlet of Vestreno, in the municipality of Valvarrone above the charming town of Dervio, our apartment is a family-run retreat managed by a mother and daughter who take great pride in welcoming guests.',
+    'about.p2': 'The apartment sleeps up to 4 guests with a comfortable bedroom and a sofa bed in the living area. Bright, well-kept and full of character. Whether you\'re here to relax by the lake, hike the surrounding hills, or simply slow down. This is your home away from home, and we\'ll be happy to host you.',
     'about.guests': 'Guests',
     'about.bathroom': 'Bathroom',
     'about.kitchen': 'Kitchen',
@@ -40,18 +39,18 @@ const translations = {
 
     'hosts.label': 'Your Hosts',
     'hosts.title': 'Chiara (Ki) & Simonetta (Si)',
-    'hosts.p1': 'We\'re Chiara and Simonetta, a mother and daughter from the Lake Como area. We personally take care of every stay and love having guests.',
+    'hosts.p1': 'We\'re Chiara and Simonetta, mother and daughter united by our passion for hospitality on Lake Como. We personally take care of every detail to make you feel at home. We\'ll be happy to host you and we\'re always available to help you plan your ideal stay, recommending the perfect restaurant, outing, or hike for you.',
     'hosts.p2': 'We\'re always around if you need anything: local tips, restaurant suggestions, or help planning your time here.',
     'hosts.wa': 'Say Hello on WhatsApp',
 
     'location.label': 'Where We Are',
-    'location.title': 'Vestreno, above Lake Como',
+    'location.title': 'Valvarrone, above Lake Como',
     'location.desc': 'A hidden gem in the Italian Lake District where mountains meet water',
-    'location.p': 'Vestreno is a small, peaceful village perched on the hills above Dervio, on the eastern branch of Lake Como. From here, you can enjoy breathtaking views over the lake and easy access to all that the area has to offer.',
-    'location.d1': '<strong>10 min</strong> to Dervio town centre &amp; lake shore',
+    'location.p': 'Valvarrone, in the hamlet of Vestreno, is a small, peaceful village perched on the hills above Dervio, on the eastern branch of Lake Como. From here, you can enjoy breathtaking views over the lake and easy access to all that the area has to offer.',
+    'location.d1': '<strong>10 min</strong> to Dervio town centre &amp; swimmable lake shore',
     'location.d2': '<strong>30 min</strong> to Lecco by car',
     'location.d3': '<strong>1 hr</strong> to Milan by train from Dervio',
-    'location.d4': '<strong>15 min</strong> to Colico ferry terminal',
+    'location.d4': '<strong>20 min</strong> to Varenna ferry terminal, with connections to all lake destinations. <a class="location-link" href="https://www.navigazionelaghi.it" target="_blank" rel="noopener">Check ferry schedules<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>',
     'location.d5': '<strong>Trekking &amp; hikes</strong> in the surrounding hills. <a class="location-link" href="https://www.komoot.com/it-it/guide/640427/fantastici-trekking-e-escursioni-nei-dintorni-di-valvarrone" target="_blank" rel="noopener">See the trail guide<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>',
 
     'amenities.label': "What's Included",
@@ -66,7 +65,7 @@ const translations = {
     'amenities.air.title': 'Fresh Mountain Air',
     'amenities.air.desc': 'No A/C needed - clean, natural mountain air keeps the apartment cool and pleasant all summer',
     'amenities.dogs.title': 'Dogs Welcome',
-    'amenities.dogs.desc': 'Your four-legged friends are welcome, the area is perfect for walks with dogs',
+    'amenities.dogs.desc': 'Your small-sized four-legged friends are welcome, the area is perfect for walks with dogs',
     'amenities.linen.title': 'Linen & Towels',
     'amenities.linen.desc': 'Fresh bed linen and towels provided for every stay',
     'amenities.laundry.title': 'Laundry',
@@ -96,7 +95,7 @@ const translations = {
     'contact.email.label': 'Email',
     'contact.checkin.label': 'Check-in / Check-out',
     'contact.checkin.value': 'Check-in: from 3:00 PM<br>Check-out: by 11:00 AM',
-    'contact.cin.label': 'CIN (National ID Code)',
+    'contact.cin.label': 'CIN',
 
     'footer.desc': 'A family-run apartment above Lake Como.<br>Made with love by a mother and daughter.',
 
@@ -115,7 +114,7 @@ const translations = {
     'avail.requestWa': 'Request on WhatsApp',
     'avail.waRequest': "Hello! I'd like to book Kisi Home from {checkIn} to {checkOut} ({nights} nights). Is it available?",
 
-    'wa.message': "Hello! I'm interested in booking your apartment in Vestreno. Could you please tell me if it's available for my dates?",
+    'wa.message': "Hello! I'm interested in booking your apartment in Valvarrone. Could you please tell me if it's available for my dates?",
   },
 
   it: {
@@ -129,16 +128,15 @@ const translations = {
     'wa.float': 'Prenota',
 
     'hero.tagline': 'Una casa sopra il lago',
-    'hero.subtitle': 'Appartamento a Vestreno · Lago di Como, Italia',
+    'hero.subtitle': 'Appartamento a Valvarrone · Lago di Como, Italia',
     'hero.bookWa': 'Prenota su WhatsApp',
     'hero.discover': 'Scopri di più',
     'hero.scroll': 'Scorri per esplorare',
 
     'about.label': 'La nostra casa',
     'about.title': 'Un appartamento accogliente, gestito con cura',
-    'about.p1': 'Nel piccolo borgo di Vestreno, sopra Dervio, il nostro appartamento è gestito direttamente da noi, madre e figlia, con attenzione e cura per ogni ospite.',
-    'about.p2': "L'appartamento ospita fino a 4 persone con una camera da letto e un divano letto nel soggiorno. Luminoso, curato, pieno di carattere. Che siate qui per il lago, le escursioni o semplicemente per staccare. Qui troverete il vostro posto.",
-    'about.beds': 'Letti',
+    'about.p1': 'Nella piccola frazione di Vestreno, nel comune di Valvarrone sopra Dervio, il nostro appartamento è gestito direttamente da noi, figlia e mamma, con attenzione e cura per ogni ospite.',
+    'about.p2': "L'appartamento ospita fino a 4 persone con una camera da letto e un divano letto nel soggiorno. Luminoso, curato, pieno di carattere. Che siate qui per il lago, le escursioni o semplicemente per staccare dalla frenesia della città. Qui troverete il vostro posto, e saremo felici di accogliervi.",
     'about.guests': 'Ospiti',
     'about.bathroom': 'Bagno',
     'about.kitchen': 'Cucina',
@@ -156,18 +154,18 @@ const translations = {
 
     'hosts.label': 'Chi siamo',
     'hosts.title': 'Chiara (Ki) & Simonetta (Si)',
-    'hosts.p1': 'Siamo Chiara e Simonetta, madre e figlia della zona del Lago di Como. Ci occupiamo personalmente di ogni soggiorno e siamo felici di accogliere i nostri ospiti.',
+    'hosts.p1': "Siamo Chiara e Simonetta, figlia e mamma unite dalla passione per l'ospitalità sul Lago di Como. Ci occupiamo personalmente di ogni dettaglio per farvi sentire come a casa. Saremo felici di accogliervi e siamo a disposizione per aiutarvi a disegnare la vostra vacanza ideale consigliandovi il ristorante perfetto, la gita o l'escursione più adatta a voi.",
     'hosts.p2': 'Siamo sempre disponibili se avete bisogno di qualcosa: consigli sulla zona, ristoranti, o aiuto per organizzare la vostra vacanza.',
     'hosts.wa': 'Scrivici su WhatsApp',
 
     'location.label': 'Dove siamo',
-    'location.title': 'Vestreno, sopra il Lago di Como',
+    'location.title': 'Valvarrone, sopra il Lago di Como',
     'location.desc': 'Un angolo nascosto del Lago di Como tra montagne e acqua',
-    'location.p': 'Vestreno è un piccolo borgo sulle colline sopra Dervio, sul ramo orientale del Lago di Como. Da qui si gode di una vista spettacolare sul lago e si raggiungono facilmente tutte le attrazioni della zona.',
-    'location.d1': '<strong>10 min</strong> dal centro di Dervio e dalla riva del lago',
+    'location.p': 'Valvarrone, nella frazione di Vestreno, è un piccolo borgo sulle colline sopra Dervio, sul ramo orientale del Lago di Como. Da qui si gode di una vista spettacolare sul lago e si raggiungono facilmente tutte le attrazioni della zona.',
+    'location.d1': '<strong>10 min</strong> dal centro di Dervio e dalla riva del lago balneabile',
     'location.d2': '<strong>30 min</strong> da Lecco in auto',
     'location.d3': '<strong>1 ora</strong> da Milano in treno da Dervio',
-    'location.d4': '<strong>15 min</strong> dal traghetto di Colico',
+    'location.d4': '<strong>20 min</strong> dal traghetto di Varenna, con collegamenti verso tutte le destinazioni del lago. <a class="location-link" href="https://www.navigazionelaghi.it" target="_blank" rel="noopener">Vedi gli orari dei traghetti<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>',
     'location.d5': '<strong>Trekking ed escursioni</strong> nei dintorni. <a class="location-link" href="https://www.komoot.com/it-it/guide/640427/fantastici-trekking-e-escursioni-nei-dintorni-di-valvarrone" target="_blank" rel="noopener">Scopri la guida ai sentieri<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>',
 
     'amenities.label': 'Cosa è incluso',
@@ -182,13 +180,13 @@ const translations = {
     'amenities.air.title': 'Aria pulita e naturale',
     'amenities.air.desc': "L'aria fresca di montagna mantiene l'appartamento naturalmente piacevole in estate: niente aria condizionata necessaria",
     'amenities.dogs.title': 'Cani benvenuti',
-    'amenities.dogs.desc': 'I vostri amici a quattro zampe sono i benvenuti, la zona è perfetta per passeggiate con i cani',
+    'amenities.dogs.desc': 'I vostri amici a quattro zampe di piccola taglia sono i benvenuti, la zona è perfetta per passeggiate con i cani',
     'amenities.linen.title': 'Biancheria inclusa',
     'amenities.linen.desc': 'Lenzuola e asciugamani freschi forniti per ogni soggiorno',
     'amenities.laundry.title': 'Lavanderia',
     'amenities.laundry.desc': 'Lavanderia disponibile su richiesta',
     'amenities.pellet.title': 'Stufa a pellet',
-    'amenities.pellet.desc': 'La stufa a pellet scalda l\'ambiente e vi farà sentire ancora di più a casa, ideale per le serate fresche',
+    'amenities.pellet.desc': 'La stufa a pellet scalda l\'ambiente e vi farà sentire ancora di più a casa, ideale per le serate autunnali',
 
     'avail.label': 'Controlla le date',
     'avail.title': 'Calendario disponibilità',
@@ -212,7 +210,7 @@ const translations = {
     'contact.email.label': 'Email',
     'contact.checkin.label': 'Check-in / Check-out',
     'contact.checkin.value': 'Check-in: dalle 15:00<br>Check-out: entro le 11:00',
-    'contact.cin.label': 'CIN (Codice Identificativo Nazionale)',
+    'contact.cin.label': 'CIN',
 
     'footer.desc': 'Appartamento a gestione familiare sopra il Lago di Como.<br>Con amore, madre e figlia.',
 
@@ -231,7 +229,7 @@ const translations = {
     'avail.requestWa': 'Richiedi su WhatsApp',
     'avail.waRequest': "Ciao! Vorrei prenotare Kisi Home dal {checkIn} al {checkOut} ({nights} notti). È disponibile?",
 
-    'wa.message': "Ciao! Sono interessato/a all'appartamento a Vestreno. Potete dirmi se è disponibile per le mie date?",
+    'wa.message': "Ciao! Sono interessato/a all'appartamento a Valvarrone. Potete dirmi se è disponibile per le mie date?",
   },
 
   de: {
@@ -245,16 +243,15 @@ const translations = {
     'wa.float': 'Buchen',
 
     'hero.tagline': 'Ein Zuhause über dem See',
-    'hero.subtitle': 'Gemütliche Wohnung in Vestreno · Comer See, Italien',
+    'hero.subtitle': 'Gemütliche Wohnung in Valvarrone · Comer See, Italien',
     'hero.bookWa': 'Per WhatsApp buchen',
     'hero.discover': 'Mehr entdecken',
     'hero.scroll': 'Scrollen zum Erkunden',
 
     'about.label': 'Unser Zuhause',
     'about.title': 'Eine gemütliche Wohnung, mit Herz geführt',
-    'about.p1': 'Im kleinen Dorf Vestreno, oberhalb von Dervio, wird unsere Wohnung von Mutter und Tochter aus der Region des Comer Sees persönlich geführt.',
-    'about.p2': 'Die Wohnung bietet Platz für bis zu 4 Gäste, mit einem Schlafzimmer und einem Schlafsofa im Wohnbereich. Hell, gepflegt und voller Charakter. Ob Erholung am See, Wanderungen oder einfach durchatmen. Hier fühlen Sie sich wie zu Hause.',
-    'about.beds': 'Betten',
+    'about.p1': 'Im kleinen Ortsteil Vestreno, in der Gemeinde Valvarrone oberhalb von Dervio, wird unsere Wohnung von Mutter und Tochter persönlich geführt.',
+    'about.p2': 'Die Wohnung bietet Platz für bis zu 4 Gäste, mit einem Schlafzimmer und einem Schlafsofa im Wohnbereich. Hell, gepflegt und voller Charakter. Ob Erholung am See, Wanderungen oder einfach durchatmen. Hier fühlen Sie sich wie zu Hause, und wir freuen uns, Sie willkommen zu heißen.',
     'about.guests': 'Gäste',
     'about.bathroom': 'Badezimmer',
     'about.kitchen': 'Küche',
@@ -271,19 +268,19 @@ const translations = {
     'gallery.outside': 'Außenansicht',
 
     'hosts.label': 'Ihre Gastgeber',
-    'hosts.title': 'Chiara & Simonetta',
-    'hosts.p1': 'Wir sind Chiara und Simonetta, Mutter und Tochter aus der Region des Comer Sees. Wir kümmern uns persönlich um jeden Aufenthalt.',
+    'hosts.title': 'Chiara (Ki) & Simonetta (Si)',
+    'hosts.p1': 'Wir sind Chiara und Simonetta, Mutter und Tochter, vereint durch die Leidenschaft für Gastfreundschaft am Comer See. Wir kümmern uns persönlich um jedes Detail, damit Sie sich wie zu Hause fühlen. Wir freuen uns, Sie willkommen zu heißen, und stehen Ihnen gerne zur Seite, um Ihren idealen Aufenthalt zu planen – mit Empfehlungen für das perfekte Restaurant, einen Ausflug oder die passende Wanderung.',
     'hosts.p2': 'Wir sind immer für Sie da: lokale Tipps, Restaurantempfehlungen oder Hilfe bei der Planung Ihres Aufenthalts.',
     'hosts.wa': 'Per WhatsApp Hallo sagen',
 
     'location.label': 'Wo wir sind',
-    'location.title': 'Vestreno, über dem Comer See',
+    'location.title': 'Valvarrone, über dem Comer See',
     'location.desc': 'Ein verstecktes Juwel im italienischen Seengebiet zwischen Bergen und Wasser',
-    'location.p': 'Vestreno ist ein kleines, ruhiges Dorf auf den Hügeln oberhalb von Dervio, am östlichen Arm des Comer Sees. Von hier genießen Sie einen atemberaubenden Blick auf den See.',
-    'location.d1': '<strong>10 Min.</strong> bis ins Zentrum von Dervio & ans Seeufer',
+    'location.p': 'Valvarrone, im Ortsteil Vestreno, ist ein kleines, ruhiges Dorf auf den Hügeln oberhalb von Dervio, am östlichen Arm des Comer Sees. Von hier genießen Sie einen atemberaubenden Blick auf den See.',
+    'location.d1': '<strong>10 Min.</strong> bis ins Zentrum von Dervio und ans badetaugliche Seeufer',
     'location.d2': '<strong>30 Min.</strong> bis Lecco mit dem Auto',
     'location.d3': '<strong>1 Std.</strong> bis Mailand mit dem Zug ab Dervio',
-    'location.d4': '<strong>15 Min.</strong> bis zur Fähre in Colico',
+    'location.d4': '<strong>20 Min.</strong> bis zur Fähre in Varenna, mit Verbindungen zu allen Zielen am See. <a class="location-link" href="https://www.navigazionelaghi.it" target="_blank" rel="noopener">Fahrpläne ansehen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>',
     'location.d5': '<strong>Trekking & Wanderungen</strong> in der Umgebung. <a class="location-link" href="https://www.komoot.com/it-it/guide/640427/fantastici-trekking-e-escursioni-nei-dintorni-di-valvarrone" target="_blank" rel="noopener">Zum Wanderführer<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>',
 
     'amenities.label': 'Was enthalten ist',
@@ -298,7 +295,7 @@ const translations = {
     'amenities.air.title': 'Frische Bergluft',
     'amenities.air.desc': 'Keine Klimaanlage nötig. Saubere, natürliche Bergluft hält die Wohnung angenehm kühl',
     'amenities.dogs.title': 'Hunde willkommen',
-    'amenities.dogs.desc': 'Ihre Vierbeiner sind herzlich willkommen, die Gegend ist ideal für Spaziergänge mit Hunden',
+    'amenities.dogs.desc': 'Ihre kleinen Vierbeiner sind herzlich willkommen, die Gegend ist ideal für Spaziergänge mit Hunden',
     'amenities.linen.title': 'Bettwäsche & Handtücher',
     'amenities.linen.desc': 'Frische Bettwäsche und Handtücher für jeden Aufenthalt',
     'amenities.laundry.title': 'Wäsche',
@@ -328,7 +325,7 @@ const translations = {
     'contact.email.label': 'E-Mail',
     'contact.checkin.label': 'Check-in / Check-out',
     'contact.checkin.value': 'Check-in: ab 15:00 Uhr<br>Check-out: bis 11:00 Uhr',
-    'contact.cin.label': 'CIN (Nationaler Kenncode)',
+    'contact.cin.label': 'CIN',
 
     'footer.desc': 'Familiengeführte Wohnung über dem Comer See.<br>Mit Liebe von Mutter und Tochter.',
 
@@ -347,7 +344,7 @@ const translations = {
     'avail.requestWa': 'Anfrage per WhatsApp',
     'avail.waRequest': 'Hallo! Ich möchte Kisi Home vom {checkIn} bis {checkOut} ({nights} Nächte) buchen. Ist das verfügbar?',
 
-    'wa.message': 'Hallo! Ich interessiere mich für Ihre Wohnung in Vestreno. Ist sie für meine Daten verfügbar?',
+    'wa.message': 'Hallo! Ich interessiere mich für Ihre Wohnung in Valvarrone. Ist sie für meine Daten verfügbar?',
   }
 };
 
