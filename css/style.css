@@ -847,6 +847,17 @@ h1, h2, h3 {
   background: var(--color-past);
 }
 
+.avail-error {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--color-occupied);
+  background: rgba(217, 79, 79, 0.08);
+  border: 1px solid var(--color-occupied);
+  border-radius: 8px;
+}
+
 .availability-cta {
   text-align: center;
   margin-top: 2.5rem;

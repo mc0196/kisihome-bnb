@@ -109,6 +109,7 @@ const translations = {
     'avail.nights': 'nights',
     'avail.selectCheckout': 'Now select your check-out date',
     'avail.rangeBlocked': 'Some dates in this range are already booked. Please try a different period.',
+    'avail.loadError': "We couldn't load the latest availability right now. Please contact us on WhatsApp to confirm your dates.",
     'avail.clear': 'Clear',
     'avail.requestWa': 'Request on WhatsApp',
     'avail.waRequest': "Hello! I'd like to book Kisi Home from {checkIn} to {checkOut} ({nights} nights). Is it available?",
@@ -223,6 +224,7 @@ const translations = {
     'avail.nights': 'notti',
     'avail.selectCheckout': 'Ora seleziona la data di check-out',
     'avail.rangeBlocked': 'Alcune date in questo periodo sono già occupate. Prova un altro periodo.',
+    'avail.loadError': 'Al momento non riusciamo a caricare la disponibilità aggiornata. Contattateci su WhatsApp per confermare le date.',
     'avail.clear': 'Cancella',
     'avail.requestWa': 'Richiedi su WhatsApp',
     'avail.waRequest': "Ciao! Vorrei prenotare Kisi Home dal {checkIn} al {checkOut} ({nights} notti). È disponibile?",
@@ -337,6 +339,7 @@ const translations = {
     'avail.nights': 'Nächte',
     'avail.selectCheckout': 'Wählen Sie jetzt Ihr Check-out-Datum',
     'avail.rangeBlocked': 'Einige Daten in diesem Zeitraum sind bereits gebucht. Bitte wählen Sie einen anderen Zeitraum.',
+    'avail.loadError': 'Die aktuelle Verfügbarkeit kann derzeit nicht geladen werden. Bitte kontaktieren Sie uns auf WhatsApp, um Ihre Daten zu bestätigen.',
     'avail.clear': 'Löschen',
     'avail.requestWa': 'Anfrage per WhatsApp',
     'avail.waRequest': 'Hallo! Ich möchte Kisi Home vom {checkIn} bis {checkOut} ({nights} Nächte) buchen. Ist das verfügbar?',
@@ -376,6 +379,7 @@ function applyTranslations(lang) {
 
   renderCalendar();
   updateSelectionPanel();
+  updateAvailabilityError();
 }
 
 /* ============================================
@@ -466,16 +470,33 @@ let occupiedDates = new Set();
 
 const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzC2OccxXHNb_b-XRCwIKAawk3o0ySXhOdxDjT8n5Ygs-5_Y53OLxKynMITmNHGxgKM/exec';
 
+let availabilityFailed = false;
+
 async function loadAvailability() {
   try {
     const res = await fetch(APPS_SCRIPT_URL);
-    if (!res.ok) throw new Error('Failed to load');
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
     occupiedDates = new Set(data.occupied || []);
+    availabilityFailed = false;
   } catch (e) {
-    console.warn('Availability data not loaded:', e.message);
+    availabilityFailed = true;
+    console.error(
+      `[Kisi Home] Could not load availability from ${APPS_SCRIPT_URL}.`,
+      'Check the browser console for a CSP/CORS error, then verify the Apps Script endpoint.',
+      e
+    );
   }
+  updateAvailabilityError();
   renderCalendar();
+}
+
+function updateAvailabilityError() {
+  const el = document.getElementById('availabilityError');
+  if (!el) return;
+  const t = translations[currentLang];
+  el.textContent = availabilityFailed && t ? t['avail.loadError'] : '';
+  el.hidden = !availabilityFailed;
 }
 
 function renderCalendar() {
