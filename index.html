@@ -40,9 +40,30 @@
       </ul>
       <div class="nav-right">
         <div class="lang-switcher" id="langSwitcher">
-          <button class="lang-btn active" data-lang="en" aria-label="English">&#127468;&#127463;</button>
-          <button class="lang-btn" data-lang="it" aria-label="Italiano">&#127470;&#127481;</button>
-          <button class="lang-btn" data-lang="de" aria-label="Deutsch">&#127465;&#127466;</button>
+          <button class="lang-btn active" data-lang="en" aria-label="English">
+            <svg viewBox="0 0 60 30" aria-hidden="true">
+              <clipPath id="flagUkClip"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath>
+              <rect width="60" height="30" fill="#012169"/>
+              <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
+              <path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#flagUkClip)" stroke="#C8102E" stroke-width="4"/>
+              <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/>
+              <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/>
+            </svg>
+          </button>
+          <button class="lang-btn" data-lang="it" aria-label="Italiano">
+            <svg viewBox="0 0 3 2" aria-hidden="true">
+              <rect width="3" height="2" fill="#fff"/>
+              <rect width="1" height="2" fill="#009246"/>
+              <rect x="2" width="1" height="2" fill="#CE2B37"/>
+            </svg>
+          </button>
+          <button class="lang-btn" data-lang="de" aria-label="Deutsch">
+            <svg viewBox="0 0 5 3" aria-hidden="true">
+              <rect width="5" height="3" fill="#FFCE00"/>
+              <rect width="5" height="2" fill="#DD0000"/>
+              <rect width="5" height="1" fill="#000"/>
+            </svg>
+          </button>
         </div>
         <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
           <span></span><span></span><span></span>

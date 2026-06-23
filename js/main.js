@@ -581,12 +581,16 @@ document.getElementById('calNext').addEventListener('click', () => {
 let rangeStart = null;
 let rangeEnd = null;
 
+function toDateStr(d) {
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+}
+
 function getRangeDates(start, end) {
   const dates = [];
   const s = new Date(start + 'T00:00:00');
   const e = new Date(end + 'T00:00:00');
   for (let d = new Date(s); d <= e; d.setDate(d.getDate() + 1)) {
-    dates.push(d.toISOString().slice(0, 10));
+    dates.push(toDateStr(d));
   }
   return dates;
 }
