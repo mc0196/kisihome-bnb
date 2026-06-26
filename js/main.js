@@ -93,7 +93,7 @@ const translations = {
     'contact.phone.label': 'Phone',
     'contact.email.label': 'Email',
     'contact.checkin.label': 'Check-in / Check-out',
-    'contact.checkin.value': 'Check-in: from 3:00 PM<br>Check-out: by 11:00 AM',
+    'contact.checkin.value': 'Check-in: from 3:00 PM<br>Check-out: by 10:00 AM',
     'contact.cin.label': 'CIN',
 
     'footer.desc': 'A family-run apartment above Lake Como.<br>Made with love by a mother and daughter.',
@@ -208,7 +208,7 @@ const translations = {
     'contact.phone.label': 'Telefono',
     'contact.email.label': 'Email',
     'contact.checkin.label': 'Check-in / Check-out',
-    'contact.checkin.value': 'Check-in: dalle 15:00<br>Check-out: entro le 11:00',
+    'contact.checkin.value': 'Check-in: dalle 15:00<br>Check-out: entro le 10:00',
     'contact.cin.label': 'CIN',
 
     'footer.desc': 'Appartamento a gestione familiare sopra il Lago di Como.<br>Con amore, madre e figlia.',
@@ -323,7 +323,7 @@ const translations = {
     'contact.phone.label': 'Telefon',
     'contact.email.label': 'E-Mail',
     'contact.checkin.label': 'Check-in / Check-out',
-    'contact.checkin.value': 'Check-in: ab 15:00 Uhr<br>Check-out: bis 11:00 Uhr',
+    'contact.checkin.value': 'Check-in: ab 15:00 Uhr<br>Check-out: bis 10:00 Uhr',
     'contact.cin.label': 'CIN',
 
     'footer.desc': 'Familiengeführte Wohnung über dem Comer See.<br>Mit Liebe von Mutter und Tochter.',
@@ -367,7 +367,7 @@ function applyTranslations(lang) {
 
   const msg = encodeURIComponent(t['wa.message']);
   document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
-    link.href = `https://wa.me/393501709040?text=${msg}`;
+    link.href = `https://wa.me/393271338064?text=${msg}`;
   });
 
   document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -718,7 +718,7 @@ function updateSelectionPanel() {
       .replace('{checkOut}', formatSelectedDate(rangeEnd, currentLang))
       .replace('{nights}', nights)
   );
-  const waUrl = `https://wa.me/393501709040?text=${waMsg}`;
+  const waUrl = `https://wa.me/393271338064?text=${waMsg}`;
 
   panel.innerHTML = `
     <p class="selection-dates-list">
