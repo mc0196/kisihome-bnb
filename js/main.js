@@ -93,7 +93,7 @@ const translations = {
     'contact.phone.label': 'Phone',
     'contact.email.label': 'Email',
     'contact.checkin.label': 'Check-in / Check-out',
-    'contact.checkin.value': 'Check-in: from 3:00 PM<br>Check-out: by 11:00 AM',
+    'contact.checkin.value': 'Check-in: from 3:00 PM<br>Check-out: by 10:00 AM',
     'contact.cin.label': 'CIN',
 
     'footer.desc': 'A family-run apartment above Lake Como.<br>Made with love by a mother and daughter.',
@@ -109,6 +109,7 @@ const translations = {
     'avail.nights': 'nights',
     'avail.selectCheckout': 'Now select your check-out date',
     'avail.rangeBlocked': 'Some dates in this range are already booked. Please try a different period.',
+    'avail.loadError': "We couldn't load the latest availability right now. Please contact us on WhatsApp to confirm your dates.",
     'avail.clear': 'Clear',
     'avail.requestWa': 'Request on WhatsApp',
     'avail.waRequest': "Hello! I'd like to book Kisi Home from {checkIn} to {checkOut} ({nights} nights). Is it available?",
@@ -207,7 +208,7 @@ const translations = {
     'contact.phone.label': 'Telefono',
     'contact.email.label': 'Email',
     'contact.checkin.label': 'Check-in / Check-out',
-    'contact.checkin.value': 'Check-in: dalle 15:00<br>Check-out: entro le 11:00',
+    'contact.checkin.value': 'Check-in: dalle 15:00<br>Check-out: entro le 10:00',
     'contact.cin.label': 'CIN',
 
     'footer.desc': 'Appartamento a gestione familiare sopra il Lago di Como.<br>Con amore, madre e figlia.',
@@ -223,6 +224,7 @@ const translations = {
     'avail.nights': 'notti',
     'avail.selectCheckout': 'Ora seleziona la data di check-out',
     'avail.rangeBlocked': 'Alcune date in questo periodo sono già occupate. Prova un altro periodo.',
+    'avail.loadError': 'Al momento non riusciamo a caricare la disponibilità aggiornata. Contattateci su WhatsApp per confermare le date.',
     'avail.clear': 'Cancella',
     'avail.requestWa': 'Richiedi su WhatsApp',
     'avail.waRequest': "Ciao! Vorrei prenotare Kisi Home dal {checkIn} al {checkOut} ({nights} notti). È disponibile?",
@@ -321,7 +323,7 @@ const translations = {
     'contact.phone.label': 'Telefon',
     'contact.email.label': 'E-Mail',
     'contact.checkin.label': 'Check-in / Check-out',
-    'contact.checkin.value': 'Check-in: ab 15:00 Uhr<br>Check-out: bis 11:00 Uhr',
+    'contact.checkin.value': 'Check-in: ab 15:00 Uhr<br>Check-out: bis 10:00 Uhr',
     'contact.cin.label': 'CIN',
 
     'footer.desc': 'Familiengeführte Wohnung über dem Comer See.<br>Mit Liebe von Mutter und Tochter.',
@@ -337,6 +339,7 @@ const translations = {
     'avail.nights': 'Nächte',
     'avail.selectCheckout': 'Wählen Sie jetzt Ihr Check-out-Datum',
     'avail.rangeBlocked': 'Einige Daten in diesem Zeitraum sind bereits gebucht. Bitte wählen Sie einen anderen Zeitraum.',
+    'avail.loadError': 'Die aktuelle Verfügbarkeit kann derzeit nicht geladen werden. Bitte kontaktieren Sie uns auf WhatsApp, um Ihre Daten zu bestätigen.',
     'avail.clear': 'Löschen',
     'avail.requestWa': 'Anfrage per WhatsApp',
     'avail.waRequest': 'Hallo! Ich möchte Kisi Home vom {checkIn} bis {checkOut} ({nights} Nächte) buchen. Ist das verfügbar?',
@@ -364,7 +367,7 @@ function applyTranslations(lang) {
 
   const msg = encodeURIComponent(t['wa.message']);
   document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
-    link.href = `https://wa.me/393501709040?text=${msg}`;
+    link.href = `https://wa.me/393271338064?text=${msg}`;
   });
 
   document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -376,6 +379,7 @@ function applyTranslations(lang) {
 
   renderCalendar();
   updateSelectionPanel();
+  updateAvailabilityError();
 }
 
 /* ============================================
@@ -466,16 +470,33 @@ let occupiedDates = new Set();
 
 const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzC2OccxXHNb_b-XRCwIKAawk3o0ySXhOdxDjT8n5Ygs-5_Y53OLxKynMITmNHGxgKM/exec';
 
+let availabilityFailed = false;
+
 async function loadAvailability() {
   try {
     const res = await fetch(APPS_SCRIPT_URL);
-    if (!res.ok) throw new Error('Failed to load');
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
     occupiedDates = new Set(data.occupied || []);
+    availabilityFailed = false;
   } catch (e) {
-    console.warn('Availability data not loaded:', e.message);
+    availabilityFailed = true;
+    console.error(
+      `[Kisi Home] Could not load availability from ${APPS_SCRIPT_URL}.`,
+      'Check the browser console for a CSP/CORS error, then verify the Apps Script endpoint.',
+      e
+    );
   }
+  updateAvailabilityError();
   renderCalendar();
+}
+
+function updateAvailabilityError() {
+  const el = document.getElementById('availabilityError');
+  if (!el) return;
+  const t = translations[currentLang];
+  el.textContent = availabilityFailed && t ? t['avail.loadError'] : '';
+  el.hidden = !availabilityFailed;
 }
 
 function renderCalendar() {
@@ -581,12 +602,16 @@ document.getElementById('calNext').addEventListener('click', () => {
 let rangeStart = null;
 let rangeEnd = null;
 
+function toDateStr(d) {
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+}
+
 function getRangeDates(start, end) {
   const dates = [];
   const s = new Date(start + 'T00:00:00');
   const e = new Date(end + 'T00:00:00');
   for (let d = new Date(s); d <= e; d.setDate(d.getDate() + 1)) {
-    dates.push(d.toISOString().slice(0, 10));
+    dates.push(toDateStr(d));
   }
   return dates;
 }
@@ -693,7 +718,7 @@ function updateSelectionPanel() {
       .replace('{checkOut}', formatSelectedDate(rangeEnd, currentLang))
       .replace('{nights}', nights)
   );
-  const waUrl = `https://wa.me/393501709040?text=${waMsg}`;
+  const waUrl = `https://wa.me/393271338064?text=${waMsg}`;
 
   panel.innerHTML = `
     <p class="selection-dates-list">
