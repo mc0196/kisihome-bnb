@@ -36,6 +36,7 @@ const translations = {
     'gallery.bathroom': 'Bathroom',
     'gallery.garden': 'Garden',
     'gallery.outside': 'Outside',
+    'gallery.washingMachine': 'Washing Machine',
 
     'hosts.label': 'Your Hosts',
     'hosts.title': 'Chiara (Ki) & Simonetta (Si)',
@@ -51,6 +52,8 @@ const translations = {
     'location.d3': '<strong>1 hr</strong> to Milan by train from Dervio',
     'location.d4': '<strong>20 min</strong> to Varenna ferry terminal, with connections to all lake destinations. <a class="location-link" href="https://www.navigazionelaghi.it" target="_blank" rel="noopener">Check schedules<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>',
     'location.d5': '<strong>Trekking &amp; hikes</strong> in the surrounding hills. <a class="location-link" href="https://www.komoot.com/it-it/guide/640427/fantastici-trekking-e-escursioni-nei-dintorni-di-valvarrone" target="_blank" rel="noopener">See the trail guide<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>',
+    'location.mapNotice': 'To protect your privacy, the map is not loaded until you accept cookies.',
+    'location.mapNoticeBtn': 'Manage cookie preferences',
 
     'amenities.label': "What's Included",
     'amenities.title': 'Everything you need',
@@ -68,7 +71,7 @@ const translations = {
     'amenities.linen.title': 'Linen & Towels',
     'amenities.linen.desc': 'Fresh bed linen and towels provided for every stay',
     'amenities.laundry.title': 'Laundry',
-    'amenities.laundry.desc': 'Washing machine available on request',
+    'amenities.laundry.desc': 'Washing machine available in the apartment',
     'amenities.pellet.title': 'Pellet Stove',
     'amenities.pellet.desc': 'The pellet stove warms the room and adds that extra touch of home, perfect for cool evenings',
 
@@ -151,6 +154,7 @@ const translations = {
     'gallery.bathroom': 'Bagno',
     'gallery.garden': 'Giardino',
     'gallery.outside': 'Esterno',
+    'gallery.washingMachine': 'Lavatrice',
 
     'hosts.label': 'Chi siamo',
     'hosts.title': 'Chiara (Ki) & Simonetta (Si)',
@@ -166,6 +170,8 @@ const translations = {
     'location.d3': '<strong>1 ora</strong> a Milano in treno da Dervio',
     'location.d4': '<strong>20 min</strong> al traghetto di Varenna, con collegamenti verso tutte le destinazioni del lago. <a class="location-link" href="https://www.navigazionelaghi.it" target="_blank" rel="noopener">Vedi gli orari<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>',
     'location.d5': '<strong>Trekking ed escursioni</strong> nei dintorni. <a class="location-link" href="https://www.komoot.com/it-it/guide/640427/fantastici-trekking-e-escursioni-nei-dintorni-di-valvarrone" target="_blank" rel="noopener">Scopri la guida ai sentieri<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>',
+    'location.mapNotice': 'Per proteggere la tua privacy, la mappa non viene caricata finché non accetti i cookie.',
+    'location.mapNoticeBtn': 'Gestisci preferenze cookie',
 
     'amenities.label': 'Cosa è incluso',
     'amenities.title': 'Tutto ciò che serve',
@@ -183,7 +189,7 @@ const translations = {
     'amenities.linen.title': 'Biancheria inclusa',
     'amenities.linen.desc': 'Lenzuola e asciugamani freschi forniti per ogni soggiorno',
     'amenities.laundry.title': 'Lavanderia',
-    'amenities.laundry.desc': 'Lavanderia disponibile su richiesta',
+    'amenities.laundry.desc': 'Lavatrice disponibile nell\'appartamento',
     'amenities.pellet.title': 'Stufa a pellet',
     'amenities.pellet.desc': 'La stufa a pellet scalda l\'ambiente e vi farà sentire ancora di più a casa, ideale per le serate autunnali',
 
@@ -266,6 +272,7 @@ const translations = {
     'gallery.bathroom': 'Badezimmer',
     'gallery.garden': 'Garten',
     'gallery.outside': 'Außenansicht',
+    'gallery.washingMachine': 'Waschmaschine',
 
     'hosts.label': 'Ihre Gastgeber',
     'hosts.title': 'Chiara (Ki) & Simonetta (Si)',
@@ -281,6 +288,8 @@ const translations = {
     'location.d3': '<strong>1 Std.</strong> bis Mailand mit dem Zug ab Dervio',
     'location.d4': '<strong>20 Min.</strong> bis zur Fähre in Varenna, mit Verbindungen zu allen Zielen am See. <a class="location-link" href="https://www.navigazionelaghi.it" target="_blank" rel="noopener">Fahrpläne ansehen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>',
     'location.d5': '<strong>Trekking & Wanderungen</strong> in der Umgebung. <a class="location-link" href="https://www.komoot.com/it-it/guide/640427/fantastici-trekking-e-escursioni-nei-dintorni-di-valvarrone" target="_blank" rel="noopener">Zum Wanderführer<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>',
+    'location.mapNotice': 'Zum Schutz Ihrer Privatsphäre wird die Karte erst geladen, wenn Sie Cookies akzeptieren.',
+    'location.mapNoticeBtn': 'Cookie-Einstellungen verwalten',
 
     'amenities.label': 'Was enthalten ist',
     'amenities.title': 'Alles, was Sie brauchen',
@@ -298,7 +307,7 @@ const translations = {
     'amenities.linen.title': 'Bettwäsche & Handtücher',
     'amenities.linen.desc': 'Frische Bettwäsche und Handtücher für jeden Aufenthalt',
     'amenities.laundry.title': 'Wäsche',
-    'amenities.laundry.desc': 'Waschmaschine auf Anfrage verfügbar',
+    'amenities.laundry.desc': 'Waschmaschine in der Wohnung vorhanden',
     'amenities.pellet.title': 'Pelletofen',
     'amenities.pellet.desc': 'Der Pelletofen wärmt den Raum und sorgt für ein echtes Heimgefühl, perfekt für kühle Abende',
 
@@ -376,6 +385,8 @@ function applyTranslations(lang) {
 
   document.documentElement.lang = lang;
   localStorage.setItem('lang', lang);
+
+  if (window.CookieConsent) CookieConsent.setLanguage(lang);
 
   renderCalendar();
   updateSelectionPanel();

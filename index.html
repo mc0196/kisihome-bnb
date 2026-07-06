@@ -24,6 +24,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="vendor/cookieconsent/cookieconsent.css">
 </head>
 <body>
 
@@ -153,23 +154,38 @@
         </button>
         <div class="gallery-scroll" id="galleryScroll">
           <div class="gallery-item">
-            <img src="images/garden.jpeg" alt="Garden"
+            <img src="images/garden-1.jpeg" alt="Garden terrace"
                  onerror="this.src='https://placehold.co/500x400/1f4d5a/ffffff?text=Garden'">
             <span class="gallery-label" data-i18n="gallery.garden">Garden</span>
           </div>
           <div class="gallery-item">
+            <img src="images/garden.jpeg" alt="Garden terrace at dusk"
+                 onerror="this.src='https://placehold.co/500x400/1f4d5a/ffffff?text=Garden'">
+            <span class="gallery-label" data-i18n="gallery.garden">Garden</span>
+          </div>
+           <div class="gallery-item">
             <img src="images/outside.jpeg" alt="Outside view"
                  onerror="this.src='https://placehold.co/500x400/2d6a7a/ffffff?text=Outside+View'">
             <span class="gallery-label" data-i18n="gallery.outside">Outside</span>
           </div>
           <div class="gallery-item">
-            <img src="images/living-room.jpeg" alt="Living room"
+            <img src="images/living-room-1.jpeg" alt="Living room — another angle"
                  onerror="this.src='https://placehold.co/800x500/e8d5b7/2c2c2c?text=Living+Room'">
             <span class="gallery-label" data-i18n="gallery.livingRoom">Living Room</span>
           </div>
           <div class="gallery-item">
-            <img src="images/living-room-1.jpeg" alt="Living room — another angle"
+            <img src="images/living-room-2.jpeg" alt="Living room — dining area"
                  onerror="this.src='https://placehold.co/800x500/e8d5b7/2c2c2c?text=Living+Room'">
+            <span class="gallery-label" data-i18n="gallery.livingRoom">Living Room</span>
+          </div>
+          <div class="gallery-item">
+            <img src="images/living-room-3.jpeg" alt="Living room — sofa and staircase"
+                 onerror="this.src='https://placehold.co/800x500/e8d5b7/2c2c2c?text=Living+Room'">
+            <span class="gallery-label" data-i18n="gallery.livingRoom">Living Room</span>
+          </div>
+          <div class="gallery-item">
+            <img src="images/stairs.jpeg" alt="Staircase to the loft"
+                 onerror="this.src='https://placehold.co/500x400/e8d5b7/2c2c2c?text=Living+Room'">
             <span class="gallery-label" data-i18n="gallery.livingRoom">Living Room</span>
           </div>
           <div class="gallery-item">
@@ -178,9 +194,14 @@
             <span class="gallery-label" data-i18n="gallery.kitchen">Kitchen</span>
           </div>
           <div class="gallery-item">
-            <img src="images/garden-1.jpeg" alt="Garden — another angle"
-                 onerror="this.src='https://placehold.co/500x400/1f4d5a/ffffff?text=Garden'">
-            <span class="gallery-label" data-i18n="gallery.garden">Garden</span>
+            <img src="images/kitchen-1.jpeg" alt="Kitchen — entryway"
+                 onerror="this.src='https://placehold.co/500x400/2d6a7a/ffffff?text=Kitchen'">
+            <span class="gallery-label" data-i18n="gallery.kitchen">Kitchen</span>
+          </div>
+          <div class="gallery-item">
+            <img src="images/coffee.jpeg" alt="Coffee machine"
+                 onerror="this.src='https://placehold.co/500x400/2d6a7a/ffffff?text=Kitchen'">
+            <span class="gallery-label" data-i18n="gallery.kitchen">Kitchen</span>
           </div>
           <div class="gallery-item">
             <img src="images/bedroom.jpeg" alt="Bedroom"
@@ -188,9 +209,39 @@
             <span class="gallery-label" data-i18n="gallery.bedroom">Bedroom</span>
           </div>
           <div class="gallery-item">
+            <img src="images/bed.jpeg" alt="Bedroom — bed"
+                 onerror="this.src='https://placehold.co/500x400/4a8fa1/ffffff?text=Bedroom'">
+            <span class="gallery-label" data-i18n="gallery.bedroom">Bedroom</span>
+          </div>
+          <div class="gallery-item">
+            <img src="images/bed-1.jpeg" alt="Bedroom — bed with towels"
+                 onerror="this.src='https://placehold.co/500x400/4a8fa1/ffffff?text=Bedroom'">
+            <span class="gallery-label" data-i18n="gallery.bedroom">Bedroom</span>
+          </div>
+          <div class="gallery-item">
+            <img src="images/bed-2.jpeg" alt="Bedroom — loft view"
+                 onerror="this.src='https://placehold.co/500x400/4a8fa1/ffffff?text=Bedroom'">
+            <span class="gallery-label" data-i18n="gallery.bedroom">Bedroom</span>
+          </div>
+          <div class="gallery-item">
+            <img src="images/bedroom-1.jpeg" alt="Bedroom — wardrobe area"
+                 onerror="this.src='https://placehold.co/500x400/4a8fa1/ffffff?text=Bedroom'">
+            <span class="gallery-label" data-i18n="gallery.bedroom">Bedroom</span>
+          </div>
+          <div class="gallery-item">
             <img src="images/bathroom.jpeg" alt="Bathroom"
                  onerror="this.src='https://placehold.co/500x400/c8956c/ffffff?text=Bathroom'">
             <span class="gallery-label" data-i18n="gallery.bathroom">Bathroom</span>
+          </div>
+          <div class="gallery-item">
+            <img src="images/bathroom-1.jpeg" alt="Bathroom — sink"
+                 onerror="this.src='https://placehold.co/500x400/c8956c/ffffff?text=Bathroom'">
+            <span class="gallery-label" data-i18n="gallery.bathroom">Bathroom</span>
+          </div>
+          <div class="gallery-item">
+            <img src="images/washing-machine.jpeg" alt="Washing machine"
+                 onerror="this.src='https://placehold.co/500x400/2d6a7a/ffffff?text=Washing+Machine'">
+            <span class="gallery-label" data-i18n="gallery.washingMachine">Washing Machine</span>
           </div>
         </div>
         <button class="gallery-arrow gallery-arrow--next" id="galleryNext" aria-label="Next">
@@ -258,11 +309,16 @@
         </div>
         <div class="location-map">
           <div class="map-embed">
+            <div class="map-consent-notice" id="mapConsentNotice">
+              <p data-i18n="location.mapNotice">To protect your privacy, the map is not loaded until you accept cookies.</p>
+              <button type="button" class="btn btn-outline" id="mapConsentBtn" data-i18n="location.mapNoticeBtn">Manage cookie preferences</button>
+            </div>
             <iframe
-              src="https://maps.google.com/maps?q=Valvarrone+Vestreno+LC+Italy&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              id="mapIframe"
+              data-src="https://maps.google.com/maps?q=Valvarrone+Vestreno+LC+Italy&t=&z=13&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="350"
-              style="border:0;"
+              style="border:0; display:none;"
               allowfullscreen=""
               loading="lazy"
               title="Map showing Valvarrone (Vestreno) near Lake Como, Italy">
@@ -336,7 +392,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6h3"/><path d="M17 6h.01"/><rect x="3" y="2" width="18" height="20" rx="2"/><circle cx="12" cy="13" r="5"/><path d="M12 18a2.5 2.5 0 0 0 0-5 2.5 2.5 0 0 1 0-5"/></svg>
           </div>
           <h3 data-i18n="amenities.laundry.title">Laundry</h3>
-          <p data-i18n="amenities.laundry.desc">Washing machine available on request</p>
+          <p data-i18n="amenities.laundry.desc">Washing machine available in the apartment</p>
         </div>
 
         <div class="amenity-card">
@@ -492,6 +548,10 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
     </button>
   </div>
+
+  <!-- Cookie Consent (self-hosted, no third-party requests) -->
+  <script src="vendor/cookieconsent/cookieconsent.umd.js"></script>
+  <script src="js/cookie-consent.js"></script>
 
   <script src="js/main.js"></script>
   <!-- Cloudflare Web Analytics -->
